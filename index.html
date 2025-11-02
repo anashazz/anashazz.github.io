@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anashazz - Developer Portfolio</title>
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for Icons (including Fab icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJzL3m3YI1QdF/M4bE4T2qF5xLp8a3f5A4P6fC6gD5QG4A5P6fC6gD5QG4A5P5w/8A03E4G4G4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Use Inter font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS to ensure the Inter font is used and smooth transitions */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e; /* Deep purple/blue background (Kept dark for contrast) */
+            color: #e4e4e7; /* Light text */
+        }
+        .project-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.4), 0 6px 10px -3px rgba(0, 0, 0, 0.3);
+            /* Highlight on hover - Uses the new vibrant end color of the gradient */
+            border-color: #0363ff; 
+        }
+        /* UPDATED GRADIENT COLORS */
+        .text-gradient {
+            background-image: linear-gradient(to right, #9ca9ff, #0363ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- Header Section -->
+    <header class="py-6 border-b border-gray-700/50 sticky top-0 z-10 backdrop-blur-sm bg-1a1a2e/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-gradient">Anashazz</h1>
+            <nav class="space-x-4">
+                <a href="#projects" class="text-gray-300 hover:text-white transition duration-200">Projects</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition duration-200">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition duration-200">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Hero/Introduction Section -->
+        <section id="hero" class="text-center mb-20 p-8 bg-gray-800/50 rounded-xl">
+            <!-- PROFILE IMAGE ADDED HERE -->
+            <!-- The shadow color has been updated to match the new vibrant end color -->
+            <img src="profile.png" alt="Anashazz Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-[#9ca9ff] shadow-2xl shadow-[#0363ff]/50">
+            
+            <h2 class="text-5xl sm:text-7xl font-extrabold mb-4 leading-tight">
+                Creative Web & <span class="text-gradient">Logic Builder</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Welcome to my portfolio showcasing various projects—from unique OS simulations and utility dashboards to scientific tools and fun games—all built with a focus on pure, efficient web technologies.
+            </p>
+            <!-- CTA Button color remains the start color for contrast -->
+            <a href="#projects" class="mt-8 inline-block bg-[#9ca9ff] hover:bg-[#6c7bda] text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out">
+                View My Work
+            </a>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20">
+            <!-- Updated Border Color -->
+            <h2 class="text-4xl font-bold mb-10 border-b-4 border-[#9ca9ff] pb-2 inline-block">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Cards (Updated Hover Border Color) -->
+                <a href="https://anashazz.github.io/SciCalc" target="_blank" rel="noopener noreferrer" class="project-card block p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#0363ff]">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">SciCalc</h3>
+                    <p class="text-gray-400 mb-4 text-sm">A full-featured scientific calculator application built for complex mathematical computations and engineering tasks.</p>
+                    <span class="inline-block text-xs font-medium text-[#9ca9ff] bg-gray-900 px-3 py-1 rounded-full">Utility Tool</span>
+                </a>
+
+                <a href="https://anashazz.github.io/snakee" target="_blank" rel="noopener noreferrer" class="project-card block p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#0363ff]">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Snakee</h3>
+                    <p class="text-gray-400 mb-4 text-sm">A classic Snake game implementation, focusing on smooth controls and engaging, retro-style gameplay.</p>
+                    <span class="inline-block text-xs font-medium text-[#9ca9ff] bg-gray-900 px-3 py-1 rounded-full">Game Development</span>
+                </a>
+
+                <a href="https://anashazz.github.io/anas-flowchart-builder" target="_blank" rel="noopener noreferrer" class="project-card block p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#0363ff]">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Flowchart Builder</h3>
+                    <p class="text-gray-400 mb-4 text-sm">A dedicated tool designed to easily create, edit, and visualize flowcharts for logic and process mapping.</p>
+                    <span class="inline-block text-xs font-medium text-[#9ca9ff] bg-gray-900 px-3 py-1 rounded-full">Interactive Tool</span>
+                </a>
+
+                <a href="https://anashazz.github.io/AnasDash" target="_blank" rel="noopener noreferrer" class="project-card block p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#0363ff]">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">AnasDash</h3>
+                    <p class="text-gray-400 mb-4 text-sm">A simple, customizable dashboard interface for tracking information and displaying useful widgets.</p>
+                    <span class="inline-block text-xs font-medium text-[#9ca9ff] bg-gray-900 px-3 py-1 rounded-full">Dashboard UI</span>
+                </a>
+
+                <a href="https://anashazz.github.io/Anas-OS" target="_blank" rel="noopener noreferrer" class="project-card block p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#0363ff]">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Anas OS</h3>
+                    <p class="text-gray-400 mb-4 text-sm">A creative simulation or representation of a basic operating system interface, exploring desktop UI concepts.</p>
+                    <span class="inline-block text-xs font-medium text-[#9ca9ff] bg-gray-900 px-3 py-1 rounded-full">OS Simulation</span>
+                </a>
+
+                <a href="https://anashazz.github.io/TheHauntedAlley" target="_blank" rel="noopener noreferrer" class="project-card block p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#0363ff]">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">TheHauntedAlley</h3>
+                    <p class="text-gray-400 mb-4 text-sm">An immersive game or interactive story based on a spooky, haunted theme.</p>
+                    <span class="inline-block text-xs font-medium text-[#9ca9ff] bg-gray-900 px-3 py-1 rounded-full">Creative/Story</span>
+                </a>
+
+                <a href="https://anashazz.github.io/rolling-ballz" target="_blank" rel="noopener noreferrer" class="project-card block p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#0363ff]">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">rolling ballz</h3>
+                    <p class="text-gray-400 mb-4 text-sm">A physics-based game challenge involving controlling a rolling ball through various 3D obstacles and levels.</p>
+                    <span class="inline-block text-xs font-medium text-[#9ca9ff] bg-gray-900 px-3 py-1 rounded-full">Physics Game</span>
+                </a>
+
+                <a href="https://anashazz.github.io/FuzzyBuzzy" target="_blank" rel="noopener noreferrer" class="project-card block p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#0363ff]">
+                    <h3 class="text-2xl font-semibold mb-2 text-white">FuzzyBuzzy</h3>
+                    <p class="text-gray-400 mb-4 text-sm">A lighthearted or experimental project, likely a game or utility with a unique and engaging visual theme.</p>
+                    <span class="inline-block text-xs font-medium text-[#9ca9ff] bg-gray-900 px-3 py-1 rounded-full">Experimental App</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="pt-10 mb-20">
+            <!-- Updated Border Color -->
+            <h2 class="text-4xl font-bold mb-6 border-b-4 border-[#9ca9ff] pb-2 inline-block">About Me</h2>
+            <div class="bg-gray-800/50 p-8 rounded-xl shadow-xl">
+                <p class="text-lg text-gray-300 mb-4">
+                    I'm a passionate developer who is 12, focused on building functional and engaging projects using core web technologies like HTML, CSS, and JavaScript. My work focuses on creative problem-solving, resulting in everything from scientific tools to engaging physics games and operating system simulations.
+                </p>
+                <p class="text-lg text-gray-300">
+                    I believe in clean code and efficient solutions, proving that you don't need complex ecosystems to build powerful applications. My projects demonstrate a strong foundation in pure web development and a drive to create unique user experiences.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="pt-10">
+            <!-- Updated Border Color to new vibrant end color -->
+            <h2 class="text-4xl font-bold mb-6 border-b-4 border-[#0363ff] pb-2 inline-block">Get In Touch</h2>
+            <div class="bg-gray-800/50 p-8 rounded-xl shadow-xl">
+                <p class="text-lg text-gray-300 mb-6">
+                    Have a project idea, a question about an existing project, or just want to connect? Reach out via WhatsApp, email, or check out my GitHub below!
+                </p>
+                <div class="space-y-6 max-w-lg">
+                    
+                    <!-- GitHub Link -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-4 bg-gray-700/50 rounded-lg">
+                        <!-- GitHub Icon (Fab fa-github) -->
+                        <i class="fab fa-github h-6 w-6 text-white text-3xl flex-shrink-0"></i>
+                        <div class="flex-1">
+                            <p class="text-lg font-semibold text-white">GitHub Profile</p>
+                            <!-- Uses the new vibrant hover color -->
+                            <a href="https://github.com/Anashazz" target="_blank" rel="noopener noreferrer" class="text-2xl font-bold text-[#9ca9ff] hover:text-[#0363ff] transition duration-200 hover:underline block font-mono" aria-label="GitHub profile link">
+                                Anashazz
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Link (using Fab fa-whatsapp) -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-4 bg-gray-700/50 rounded-lg">
+                        <!-- Kept native WhatsApp Green for brand consistency -->
+                        <i class="fab fa-whatsapp h-6 w-6 text-[#25D366] text-3xl flex-shrink-0"></i>
+                        <div class="flex-1">
+                            <p class="text-lg font-semibold text-white">WhatsApp & Direct Call</p>
+                            <!-- Uses the new vibrant hover color -->
+                            <a href="https://wa.me/923326565741" target="_blank" rel="noopener noreferrer" class="text-2xl font-bold text-[#9ca9ff] hover:text-[#0363ff] transition duration-200 hover:underline block font-mono" aria-label="WhatsApp link">
+                                +92 332 6565741
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Gmail Link (using Mail Icon) -->
+                     <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-4 bg-gray-700/50 rounded-lg">
+                        <!-- Updated icon color to the new vibrant end color -->
+                        <i class="fas fa-envelope h-6 w-6 text-[#0363ff] text-3xl flex-shrink-0"></i>
+                        <div class="flex-1">
+                            <p class="text-lg font-semibold text-white">Personal Email (Gmail)</p>
+                            <!-- Uses the new vibrant hover color -->
+                            <a href="mailto:anasplayz741741@gmail.com" class="text-lg font-bold text-gray-400 hover:text-[#0363ff] transition duration-200 hover:underline block font-mono" aria-label="Gmail address link">
+                                anasplayz741741@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Outlook Link (using Envelope-Open-Text Icon) -->
+                     <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-4 bg-gray-700/50 rounded-lg">
+                        <!-- Updated icon color to the new vibrant end color -->
+                        <i class="fas fa-envelope-open-text h-6 w-6 text-[#0363ff] text-3xl flex-shrink-0"></i>
+                        <div class="flex-1">
+                            <p class="text-lg font-semibold text-white">Professional Email (Outlook)</p>
+                            <!-- Uses the new vibrant hover color -->
+                            <a href="mailto:anashafeez741@outlook.com" class="text-lg font-bold text-gray-400 hover:text-[#0363ff] transition duration-200 hover:underline block font-mono" aria-label="Outlook address link">
+                                anashafeez741@outlook.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 mt-12 border-t border-gray-700/50 text-center">
+        <p class="text-gray-500 text-sm">© 2025 Anashazz. All Rights Reserved. | Crafted with HTML and Tailwind CSS.</p>
+    </footer>
+
+</body>
+</html>
+
